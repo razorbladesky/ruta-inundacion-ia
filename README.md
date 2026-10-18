@@ -86,6 +86,13 @@ Resultados reales: [N] mapas con ruta, [N] sin ruta, [N] errores en el UCS corre
 | 11a | La segunda versión también se cortó, a mitad de una línea (`assert costos_esc1["DFS"] == 34, f`). Python la aceptó como válida y la celda terminó sin errores y sin imprimir nada | La celda no imprimió el mensaje final; al revisar el final del código se vio la línea cortada | Se corrigió la línea a mano y se pidió una celda corta con lo restante. Después se fusionaron las tres celdas en una sola, eliminando comprobaciones repetidas, y se dejó el mensaje de confirmación como última línea para que solo aparezca si todo lo anterior se ejecutó |
 | 11b | Aviso de matplotlib (`DeprecationWarning`) porque el parámetro `labels` de `boxplot` cambió de nombre | Salida de la celda | Se cambió a `tick_labels` |
 
+## Archivos
+
+- `simulacion_inundacion.ipynb`: notebook principal con la implementación, las pruebas y las explicaciones.
+- `resultados_comparacion.csv`: tabla consolidada de los 7 escenarios (21 filas).
+- `resultados_aleatorios.csv`: resultados de BFS, DFS y UCS en los 421 mapas aleatorios con ruta.
+- `README.md`: decisiones de diseño, declaración de uso de IA y registro de incidencias.
+
 ## Historial de cambios
 
 El desarrollo se registró con commits de Git desde Colab (Archivo → Guardar una copia en GitHub). Los mensajes de commit incluyen el nombre de quien realizó el cambio.
