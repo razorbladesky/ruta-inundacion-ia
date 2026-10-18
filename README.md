@@ -25,6 +25,9 @@ Prototipo de búsqueda ciega (BFS, DFS y UCS) para encontrar una ruta hacia un r
 - **Cómo se decide la mejor ruta:** la de menor costo total (suma de costos de las celdas), no la de menos pasos.
 - **Refugio inaccesible:** los algoritmos devuelven `None` y el sistema informa que no hay ruta.
 - **Validación:** una función independiente verifica inicio, fin, adyacencia, celdas no bloqueadas y recalcula el costo desde cero.
+- **Movimiento:** 4 direcciones, en orden fijo (arriba, derecha, abajo, izquierda) para que los resultados de BFS y DFS sean repetibles.
+- **Costos:** seco = 1, riesgo bajo = 3, medio = 6, alto = 10. El costo se paga al entrar a una celda; la celda de inicio no cuesta.
+- **Funciones puras:** las funciones reciben el mapa como parámetro (sin variables globales) para poder probar distintos escenarios con el mismo código.
 
 ## Declaración de uso de IA
 
@@ -36,7 +39,7 @@ Todo el código generado fue revisado y probado por el integrante responsable an
 | Parte | Integrante | Qué se solicitó | Qué se modificó | Cómo se verificó |
 |---|---|---|---|---|
 | 1. Terreno | Ivan Ortega | Matriz 10x10 con niveles de inundación, diccionario de costos, inicio, refugio y función para imprimir el mapa | Nada | Comprobé el shape (10, 10), la posición de I y R, y que la matriz coincide número por número con la definida por el equipo |
-| 2.  |  |  |  |  |
+| 2. Vecinos y costo de ruta | Ivan Ortega | Función obtener_vecinos (orden fijo: arriba, derecha, abajo, izquierda, sin bloqueados ni fuera de límites) y función costo_de_ruta (suma el costo de entrar a cada celda, sin contar el inicio), con pruebas assert | Nada | Pasaron los assert: vecinos en (2,0), (0,0) y (1,4); costo de la ruta directa = 32 (calculado a mano antes de ejecutar); ruta con celda bloqueada devuelve None. Revisé que las funciones reciben el mapa como parámetro y no usan globales |
 
 
 ## Historial de cambios
