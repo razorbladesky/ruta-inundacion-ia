@@ -35,6 +35,7 @@ Prototipo de búsqueda ciega (BFS, DFS y UCS) para encontrar una ruta hacia un r
 - **UCS:** expande siempre la celda con menor costo acumulado, usando heapq. Es aquí donde el riesgo entra en la decisión: el costo de entrar a cada celda sale del diccionario COSTOS, así que una ruta que pasa por zonas peligrosas acumula más costo y se explora después. Se marca la celda como expandida al sacarla de la cola (no al meterla) para garantizar que la ruta sea óptima, y las entradas obsoletas de la cola se descartan sin contarlas.
 - **Ruta corta vs. ruta conveniente:** BFS minimiza pasos; UCS minimiza costo. En el mapa principal BFS da una ruta de 9 pasos con costo 32 y UCS da una de 21 pasos con costo 21.
 - **Visualización:** semáforo de colores (verde, amarillo, naranja, rojo) para el riesgo creciente y negro para las zonas bloqueadas. Los valores de los títulos y de la leyenda salen del código, no se escriben a mano. La función de dibujo acepta rutas vacías para poder mostrar escenarios sin solución.
+- **Validador independiente:** validar_ruta comprueba las condiciones del escenario con su propio código y no reutiliza obtener_vecinos ni costo_de_ruta; si lo hiciera, un error en esas funciones pasaría inadvertido. Revisa explícitamente los límites del mapa porque en NumPy los índices negativos no producen error. La función auxiliar refugio_es_alcanzable permite comprobar de forma independiente si un resultado "sin ruta" es correcto.
 
 ## Declaración de uso de IA
 
