@@ -28,6 +28,9 @@ Prototipo de búsqueda ciega (BFS, DFS y UCS) para encontrar una ruta hacia un r
 - **Movimiento:** 4 direcciones, en orden fijo (arriba, derecha, abajo, izquierda) para que los resultados de BFS y DFS sean repetibles.
 - **Costos:** seco = 1, riesgo bajo = 3, medio = 6, alto = 10. El costo se paga al entrar a una celda; la celda de inicio no cuesta.
 - **Funciones puras:** las funciones reciben el mapa como parámetro (sin variables globales) para poder probar distintos escenarios con el mismo código.
+- **Nodo expandido:** cada celda que se saca de la frontera para procesarla. Se cuenta igual en BFS, DFS y UCS para que la comparación sea justa.
+- **Salida de los algoritmos:** (ruta, costo, nodos_expandidos). Si no hay ruta, (None, None, nodos_expandidos), para poder medir el trabajo realizado aun cuando el refugio es inaccesible.
+- **BFS:** minimiza el número de pasos e ignora el riesgo; el costo de la ruta se calcula solo al final.
 
 ## Declaración de uso de IA
 
@@ -40,8 +43,9 @@ Todo el código generado fue revisado y probado por el integrante responsable an
 |---|---|---|---|---|
 | 1. Terreno | Ivan Ortega | Matriz 10x10 con niveles de inundación, diccionario de costos, inicio, refugio y función para imprimir el mapa | Nada | Comprobé el shape (10, 10), la posición de I y R, y que la matriz coincide número por número con la definida por el equipo |
 | 2. Vecinos y costo de ruta | Ivan Ortega | Función obtener_vecinos (orden fijo: arriba, derecha, abajo, izquierda, sin bloqueados ni fuera de límites) y función costo_de_ruta (suma el costo de entrar a cada celda, sin contar el inicio), con pruebas assert | Nada | Pasaron los assert: vecinos en (2,0), (0,0) y (1,4); costo de la ruta directa = 32 (calculado a mano antes de ejecutar); ruta con celda bloqueada devuelve None. Revisé que las funciones reciben el mapa como parámetro y no usan globales |
-
+| 3. BFS | [Nombre] | Función bfs con deque, que ignora el riesgo al decidir, con padres para reconstruir la ruta, contador de nodos expandidos y devolución de (ruta, costo, nodos_expandidos), con pruebas assert | Nada | Pasaron los assert: la ruta del mapa principal es la fila 2 completa (9 pasos, costo 32, calculado a mano antes de ejecutar); inicio = refugio; refugio rodeado de bloqueos devuelve None; inicio bloqueado devuelve None. Revisé que marca visitados al encolar y cuenta al desencolar |
 
 ## Historial de cambios
 
 El desarrollo se registró con commits de Git desde Colab (Archivo → Guardar una copia en GitHub). Los mensajes de commit incluyen el nombre de quien realizó el cambio.
+
