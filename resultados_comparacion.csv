@@ -1,0 +1,22 @@
+Escenario,Algoritmo,¿Hay ruta?,¿Válida?,Costo,Pasos,Nodos expandidos
+1. Ruta disponible,BFS,Sí,Sí,32,9,57
+1. Ruta disponible,DFS,Sí,Sí,34,17,18
+1. Ruta disponible,UCS,Sí,Sí,21,21,71
+"2a. Se bloquea (8,5)",BFS,Sí,Sí,32,9,57
+"2a. Se bloquea (8,5)",DFS,Sí,Sí,34,17,18
+"2a. Se bloquea (8,5)",UCS,Sí,Sí,32,9,64
+"2b. Se bloquea (2,5)",BFS,Sí,Sí,57,21,88
+"2b. Se bloquea (2,5)",DFS,Sí,Sí,59,29,30
+"2b. Se bloquea (2,5)",UCS,Sí,Sí,21,21,71
+3. Refugio inaccesible,BFS,No,N/A,,,88
+3. Refugio inaccesible,DFS,No,N/A,,,88
+3. Refugio inaccesible,UCS,No,N/A,,,88
+4. Sube el riesgo del corredor sur,BFS,Sí,Sí,32,9,57
+4. Sube el riesgo del corredor sur,DFS,Sí,Sí,34,17,18
+4. Sube el riesgo del corredor sur,UCS,Sí,Sí,32,9,69
+5. El camino corto no es el mejor,BFS,Sí,Sí,31,4,8
+5. El camino corto no es el mejor,DFS,Sí,Sí,31,4,5
+5. El camino corto no es el mejor,UCS,Sí,Sí,8,8,9
+5b. Si el riesgo no pesara (todos los costos = 1),BFS,Sí,Sí,4,4,8
+5b. Si el riesgo no pesara (todos los costos = 1),DFS,Sí,Sí,4,4,5
+5b. Si el riesgo no pesara (todos los costos = 1),UCS,Sí,Sí,4,4,8
