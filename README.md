@@ -7,11 +7,11 @@ Prototipo de búsqueda ciega (BFS, DFS y UCS) para encontrar una ruta hacia un r
 
 | Integrante | Contribución |
 |---|---|
-| Ivan Arturo Ortega Monroy |  |
-|    | 
-|    |
-|    |
-|    |
+| Ivan Arturo Ortega Monroy |Representación del terreno y costos (Parte 1), vecinos y costo de ruta (Parte 2) y UCS con heapq (Parte 5) |
+| Fernando Rivas Correa | BFS y DFS con contador de nodos expandidos (Partes 3 y 4) |
+| Dante Alejandro Rivas García  | Visualización del terreno y las rutas (Parte 6), prueba de cambio de riesgo (prueba 4) y prueba del camino corto vs. conveniente con sensibilidad al costo (pruebas 5 y 5b) |
+| Victor Julián Ramos Arcos  | Validador de rutas (Parte 7) y prueba extra con mapas aleatorios y UCS defectuoso (Parte 10) |
+| Sánchez Valencia Jesús Enrique| Pruebas 1 a 3 (Parte 8), tabla comparativa de escenarios (Parte 11a) y comparación en mapas aleatorios (Parte 11b) |
 
 ## Decisiones de diseño
 
